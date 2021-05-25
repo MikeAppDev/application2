@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div 
+        class="card"
+        *ngFor="let product of products; index as productId"
+        style="width: 18rem;"
+        >
+            <div class="card-body">
+                <h5 class="card-title">{{productId}} - {{product.nom}}</h5>
+                <a class="btn btn-primary"
+                [routerLink]="['/products', productId]"
+                >En savoir plus</a>
+            </div>
+        </div>
+    </div>
+</div>
